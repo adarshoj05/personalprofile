@@ -1,0 +1,145 @@
+/* Layout helpers */
+html { scroll-behavior: smooth; }
+
+/* Profile photo */
+.profile-photo {
+  width: 150px;
+  height: 150px;
+
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-photo.has-placeholder::after {
+  content: "";
+}
+
+
+body {
+  background: #0a0a0a;
+  color: #d8d8d8;
+  font-family: "Courier Sans", "Courier New", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Roboto Mono", "Lucida Console", monospace;
+}
+
+
+.section {
+  padding: 72px 0;
+}
+
+.section.bg-soft {
+  background: #111;
+}
+
+
+.section-header {
+  margin-bottom: 22px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #ff6a00;
+}
+
+
+/* Hero */
+.hero {
+  margin-top: 56px; /* fixed navbar offset */
+  min-height: 75vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background: #0a0a0a;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+
+.card {
+  background: #0d0d0d;
+  border: 1px solid #1f1f1f;
+  color: #e8e8e8;
+}
+
+
+.card.bg-light {
+  background: #f3f6ff !important;
+  color: #0b1220;
+}
+
+.bg-soft {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Sticky dots */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot-primary { background: #ff6a00; }
+.dot-success { background: #ff6a00; }
+.dot-info { background: #ff6a00; }
+
+
+/* Section icons */
+.icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 106, 0, 0.08);
+  border: 1px solid rgba(255, 106, 0, 0.35);
+  color: #ff6a00;
+  flex: 0 0 auto;
+}
+
+
+/* Footer */
+.footer {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Forms */
+.form-control, .form-control:focus {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #e8eefc;
+  box-shadow: none;
+}
+
+textarea.form-control { resize: vertical; }
+
+.form-label { color: rgba(255,255,255,0.85); }
+
+/* Orange buttons (minimal theme) */
+.btn-primary,
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  background: #ff6a00 !important;
+  border-color: #ff6a00 !important;
+  color: #0a0a0a !important;
+}
+
+.btn-outline-primary {
+  color: #ff6a00 !important;
+  border-color: #ff6a00 !important;
+}
+
+
