@@ -6,12 +6,19 @@
   <title>Adarsh's Portfolio</title>
 </head>
 <body>
-  <h2>Hello There!</h2>
+  <audio id="myAudio" src="hello-there.mp3"></audio>
+  <span id="clickableText" style="cursor: pointer;"><h2>Hello There!</h2></span>
   <p>My name is <b>Adarsh Oommen John</b>.</p>
   <p>I am a creative person who loves to delve into the world of <b>design</b> and <b>technology</b>.</p>
   <p>I am mostly an animator, but I love to help in designing UI elements as well as making projects in VR and AR. Things with interactability are interesting to me.</p>
   <p>I am passionate about my love for movies, books, comic books, music, video games and a bunch of other stuff. You can quiz me if you want. I am a die hard fan on certain franchises.</p>
   <p>These are some of the projects that I have done so far.</p>
   <p><h3>That's all folks!</h3> Contact me if you have any queries.</p>
+  <script>
+    document.getElementById('clickableText').addEventListener('click', function() {
+      var audio = document.getElementById('myAudio');
+      audio.play();
+    });
+  </script>
 </body>
 </html>
