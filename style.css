@@ -1,0 +1,36 @@
+body {
+  font-family: 'Space Mono', monospace;
+}
+
+.section {
+    margin-top: 10rem;
+    padding-top: 10rem;
+}
+
+.hero_title {
+    margin-top: 10rem;
+    font-size: 4.5rem;
+}
+.hero_desc {
+    font-size: 2rem;
+}
+.hero_text {
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.contact_text {
+    text-align: center;
+    font-size: 1.1rem;
+}
+.contact_title {
+    font-size: 2.5rem;
+}
