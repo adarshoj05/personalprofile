@@ -18,8 +18,9 @@ body {
 .hero_text {
     position: absolute;
     top: 40%;
-    left: 60%;
-    transform: translate(-50%, -50%);
+    left: 10%;
+    width: 80%;
+    transform: translateY(-50%);
 }
 
 p {
