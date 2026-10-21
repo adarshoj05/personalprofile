@@ -1,0 +1,24 @@
+/* Right-side stage for the design / technology click animations */
+#fx {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 45vw;
+  height: 100vh;
+  height: 100dvh;
+  z-index: -1;          /* sits behind your text */
+  pointer-events: none; /* never blocks clicks */
+}
+
+/* Hint that "design" and "technology" are clickable (delete if you don't want it) */
+.fx-link {
+  cursor: pointer;
+}
+.fx-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  #fx { width: 100vw; }
+}
