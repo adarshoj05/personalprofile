@@ -11,6 +11,16 @@ body {
     margin-top: 10rem;
     font-size: 4.5rem;
 }
+.hero_title:hover {
+    color: #38a0e6;
+    transition: color 0.1s ease-in-out;
+    transform: translateY(-1px);
+    transition: transform 0.1s ease-in-out;
+}
+.hero_title:active {
+    transform: translateY(2px);
+    transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
 .hero_desc {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -21,6 +31,11 @@ body {
     left: 10%;
     width: 80%;
     transform: translateY(-50%);
+}
+
+.fx-link:hover {
+    color: #fafa25;
+    transition: color 0.2s ease-in-out;
 }
 
 p {
