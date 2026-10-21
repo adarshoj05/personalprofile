@@ -9,29 +9,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="..." crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animation.css">
 </head>
 <body>
+  <canvas id="fx" aria-hidden="true"></canvas>
+
   <section id="hero" class="container-fluid section">
     <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero_text">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero_text fade">
         <audio id="myAudio" src="./assets/hello-there.mp3"></audio>
-        <h1 class="hero_title" id="clickableText" style="cursor: pointer;">Hello There!</h1>
+        <h1 class="hero_title" id="hello-title" style="cursor: pointer;">Hello There!</h1>
         <h4 class="hero_desc">My name is <b>Adarsh Oommen John</b>.</h4>
-        <h4>I am a creative person who loves to delve into the world<br> of <b id="clickableText" style="cursor: pointer;">design</b> and <b id="clickableText" style="cursor: pointer;">technology</b>.</h4>
+        <h4>I am a creative person who loves to delve into the world<br> of <b id="design-link" class="fx-link" role="button" tabindex="0">design</b> and <b id="tech-link" class="fx-link" role="button" tabindex="0">technology</b>.</h4>
       </div>
     </div>
   </section>
 
   <section id="experience" class="container mt-4 pt-4 section">
-    <p>I am mostly an animator, but I love to help in designing UI elements as well as making projects in VR and AR.<br> Things with interactability are interesting to me.</p>
+    <p class="fade">I am mostly an animator, but I love to help in designing UI elements as well as making projects in VR and AR.<br> Things with interactability are interesting to me.</p>
   </section>
 
   <section id="interests" class="container mt-4 pt-4 section">
-    <p>I am passionate about my love for movies, books, comic books, music, video games and a bunch of other stuff.<br> I am a die hard fan on certain franchises.<br> You can quiz me if you want.<br class="mt-8"></p>
+    <p class="fade">I am passionate about my love for movies, books, comic books, music, video games and a bunch of other stuff.<br> I am a die hard fan on certain franchises.<br> You can quiz me if you want.<br class="mt-8"></p>
   </section>
 
   <section id="projects" class="container mt-4 pt-4 section">
-    <p>These are some of the projects that I have done so far:</p>
+    <p class="fade">These are some of the projects that I have done so far:</p>
     <!--<div class="row row-cols-1 md:row-cols-2 g-4" style="max-width: 800px; text-align: center; margin: auto;">
       <div class="col">
         <div class="card">
@@ -69,15 +72,21 @@
   </section>
 
   <section id="contact" class="container mt-4 pt-4 section contact_text">
-    <p><h3 class="contact_title">That's all folks!</h3> Contact me if you have any queries.</p>
+    <div class="fade">
+      <h3 class="contact_title">That's all folks!</h3>
+      Contact me if you have any queries.
+    </div>
   </section>
-  
+
   <script>
-    document.getElementById('clickableText').addEventListener('click', function() {
-      var audio = document.getElementById('myAudio');
-      audio.play();
+    // Audio plays only when you click "Hello There!"
+    var audio = document.getElementById('myAudio');
+    document.getElementById('hello-title').addEventListener('click', function () {
+      try { var p = audio.play(); if (p && p.catch) p.catch(function () {}); } catch (e) {}
     });
   </script>
+  <script src="./javascript/fade.js"></script>
+  <script src="./javascript/animation.js"></script>
   <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
 </body>
 </html>
